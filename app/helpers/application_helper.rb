@@ -9,4 +9,13 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def downcase?(email = '')
+    if email == email.downcase
+      return true
+    end
+  else
+    return false
+  end
+
 end
