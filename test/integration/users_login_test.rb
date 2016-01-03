@@ -55,9 +55,9 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_not_nil cookies['remember_token']
   end
 
-  #test "login without remembering" do
-    #log_in_as(@user, remember_me: '0')
-   # assert_equal cookies['remember_token'], assigns(:user).remember_digest
-  #end
+  test "login without remembering" do
+    log_in_as(@user, remember_me: '0')
+    assert_equal cookies['remember_token'], assigns(:user).remember_digest
+  end
 
 end
